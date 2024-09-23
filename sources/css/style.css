@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    padding-top: 100px;
+ }
+
+ .navbar {
+    height: 50px;
+ }
+ h1{
+    color: goldenrod;
+   margin: auto;
+    
+ }
+ .arizonia-regular {
+    font-family: "Arizonia", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .ligne-rouge {
+    height: 1px; 
+    background-color: red; 
+    margin: 0; 
+  }
