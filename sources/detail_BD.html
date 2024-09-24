@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails BD</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+        <div class="container">
+            <h1>Détails de la Bande Dessinée</h1>
+            <div class="form-group">
+                <label for="id">Sélectionnez un album :</label>
+                <select id="id" class="form-control">
+                    <option value="1">Album 1</option>
+                    <!-- <option value="5">Album 5</option>
+                    Ajoute d'autres options si nécessaire  -->
+                </select>
+            </div>
+            <div class="bd-container">
+                <img id="albumMini" src="" alt="Album Mini" />
+                <img id="album" src="" alt="Album" />
+                <div>
+                    <input type="text" id="serie" placeholder="Série" class="form-control" readonly />
+                    <input type="text" id="numero" placeholder="Numéro" class="form-control" readonly />
+                    <input type="text" id="titre" placeholder="Titre" class="form-control" readonly />
+                    <input type="text" id="auteur" placeholder="Auteur" class="form-control" readonly />
+                    <input type="text" id="prix" placeholder="Prix" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button type="button" class="btn btn-danger btn-lg">Ajouter au panier</button>
+            </div>
+        </div>
+        
+
+    <!--<script src="data.js"></script>Charger les données -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script  src="script.js"></script> <!-- Charger le script -->
+</body>
+</html>
