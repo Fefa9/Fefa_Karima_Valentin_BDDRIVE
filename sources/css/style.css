@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 body {
-    background-color: white;
+    background-color:black;
     padding-top: 100px;
  }
 
  .navbar {
     height: 50px;
  }
+ 
  h1{
     color: goldenrod;
    margin: auto;
@@ -26,4 +27,9 @@ body {
     height: 1px; 
     background-color: red; 
     margin: 0; 
+  }
+  .formulaire{
+   padding-top: 20px;
+   margin: auto;
+   width: 50%;
   }

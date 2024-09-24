@@ -6,7 +6,7 @@ function genererMenu(div){
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark arizonia-regular">
         <div class="container-fluid"> 
         <h1>BD Kiosque</h1>
-        <a class="nav-link text-light" style="font-size: x-large;" href="#">
+        <a class="nav-link text-light" style="font-size: x-large;" href="inscription.html">
             <i class="bi bi-person"></i>
         </a>
         <a class="nav-link text-light" style="font-size:larger;" href="#">
