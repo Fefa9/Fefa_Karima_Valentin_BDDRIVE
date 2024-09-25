@@ -33,34 +33,15 @@
         divErr.innerHTML = err.message;
     }
  });
+ 
   // viderLocalstorage()
   function viderLocalstorage() {
     localStorage.removeItem("listeCompte");
 }
  
  
- //btnValider.addEventListener("click", recupChamps);
+ 
 
-
- // recupChamps
- function recupChamps(event) {
-   
-    let mail = inputMail.value;
-    let prenom = inputPrenom.value;
-    let nom = inputNom.value;
-    let mdp = inputMdp.value;
-
-    // console.log(mail + ""+ prenom+""+nom+""+mdp)
-
-    // créer un compte
-    try {
-        let compte = new Compte(mail,prenom,nom,mdp);
-        //console.log(compte);
-    } catch (err) {
-        divErr.innerHTML = err.message;
-    }
-    
- }
  function montreMdp(){
     let mdp= document.getElementById("idMdp");
     if (mdp.type === "password") {
