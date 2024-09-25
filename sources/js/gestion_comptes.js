@@ -1,4 +1,5 @@
 "use strict"
+
  // Récupérer les éléments HTML
  let inputMail = document.getElementById("idMail");
  let inputPrenom = document.getElementById("idPrenom");
@@ -21,13 +22,21 @@
     try{
         let compte = new Compte(mail,prenom,nom,mdp);
 
+        //sauvegarde localStorage
+        let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'}'
+        let liste = localStorage.getItem("listeCompte");
+        if (liste) liste+=";" + serialCompte;
+        else liste = serialCompte;
+        localStorage.setItem("listeCompte",liste);
+
     } catch (err){
         divErr.innerHTML = err.message;
     }
-
-
  });
- 
+  // viderLocalstorage()
+  function viderLocalstorage() {
+    localStorage.removeItem("listeCompte");
+}
  
  
  //btnValider.addEventListener("click", recupChamps);
