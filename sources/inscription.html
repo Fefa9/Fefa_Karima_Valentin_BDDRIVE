@@ -16,45 +16,54 @@
 
     <!-- creation formulaire d'insciption-->
     <h2 style="color: white; text-align: center; padding-top: 20px;">Créer un compte</h2>
-    <form class="formulaire" style="color: white;">
+    <div id="idErr" style="color: red; text-align: center;"></div>
+    <form  id="idForm" class="formulaire" style="color: white;">
+        
         <div class="mb-3">
-          <label for="Adresse mail" class="form-label">Adresse mail* : </label>
+          <label for="idMail" class="form-label">Adresse mail* : </label>
           <input type="email" class="form-control" id="idMail" aria-describedby="emailHelp">
         </div>
         <h4>Civilité : </h4>
         <div class="d-flex">
         <div class="form-check me-3">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="idMme" >
+            <label class="form-check-label" for="idMme">
               Mme   
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="idM" checked>
+            <label class="form-check-label" for="idM">
              M.
             </label>
           </div>
         </div>
         <div class="mb-3">
-          <label for="prenom" class="form-label">Prénom* : </label>
+          <label for="idPrenom" class="form-label">Prénom* : </label>
           <input type="text" class="form-control" id="idPrenom">
         </div>
         <div class="mb-3">
-            <label for="nom" class="form-label">Nom* : </label>
-            <input type="text" class="form-control" id="idNom">
+            <label for="idNom" class="form-label">Nom* : </label>
+            <input type="text" class="form-control" id="idNom" >
           </div>
-          <label for="inputPassword5" class="form-label">Mot de passe* : </label>
+          <label for="idMdp" class="form-label">Mot de passe* : </label>
         <input type="password" id="idMdp" class="form-control" aria-describedby="passwordHelpBlock">
         <div id="passwordHelpBlock" class="form-text">
         Il doit contenir 8 caractères dont une minuscule, une majuscule, un chiffre et un carcrère spécial.
+        <br>
+        <input type="checkbox" onclick="montreMdp()"> Voir le mot de passe
         </div>
         <br>
-        <button type="submit" class="btn btn-danger" >Valider</button>
+        <button type="submit" id="btnValider" class="btn btn-danger" >Valider</button>
       </form>
+      <!-- Messages d'erreur -->
 
 
     <script src="js/fonctionsUtiles.js"></script>
+    <script src="js/Compte.class.js"></script>
+    <script src="js/gestion_comptes.js"></script>
+    <!--
+    <script src="js/test_Compte.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

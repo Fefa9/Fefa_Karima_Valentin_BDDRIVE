@@ -35,7 +35,7 @@ function genererMenu(div){
             </ul>
         </div>
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Auteur,titre,ISBN" aria-label="Search">
+            <input class="form-control me-2" type="search"  id="idRecherche" placeholder="Auteur,titre,ISBN" aria-label="Search">
             <button class="btn btn-light" type="submit">
                 <i class="bi bi-search"></i>
               </button>
