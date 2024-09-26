@@ -6,7 +6,7 @@ function genererMenu(div){
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark arizonia-regular">
         <div class="container-fluid"> 
         <h1>BD Kiosque</h1>
-        <a class="nav-link text-light" style="font-size: x-large;" href="#">
+        <a class="nav-link text-light" style="font-size: x-large;" href="inscription.html">
             <i class="bi bi-person"></i>
         </a>
         <a class="nav-link text-light" style="font-size:larger;" href="#">
@@ -35,7 +35,7 @@ function genererMenu(div){
             </ul>
         </div>
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Auteur,titre,ISBN" aria-label="Search">
+            <input class="form-control me-2" type="search"  id="idRecherche" placeholder="Auteur,titre,ISBN" aria-label="Search">
             <button class="btn btn-light" type="submit">
                 <i class="bi bi-search"></i>
               </button>

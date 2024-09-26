@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(0, 0, 0);
+
+    background-color:black;
+
     padding-top: 100px;
  }
 
  .navbar {
     height: 50px;
  }
+ 
  h1{
     color: goldenrod;
    margin: auto;
@@ -27,6 +30,13 @@ body {
     background-color: red; 
     margin: 0; 
   }
+
+  .formulaire{
+   padding-top: 20px;
+   margin: auto;
+   width: 50%;
+  }
+
 
   #catalogue {
    width: 70%;
@@ -53,3 +63,4 @@ body {
 .card {
    min-height: 300px; 
 }
+
