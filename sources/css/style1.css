@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+ }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.navbar {
+   height: 50px;
+}
+h1{
+   font-family: "Arizonia", system-ui;
+   color: goldenrod;
+  margin: auto;
+   
+}
+.arizonia-regular {
+   font-family: "Arizonia", system-ui;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+ .ligne-rouge {
+   height: 1px; 
+   background-color: red; 
+   margin: 0; 
+ }
+ 
+ 
+ .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+ }
+ 
+ h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arizonia", system-ui;
+    color: goldenrod;
+ }
+ 
+ .bd-container {
+   padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+   
+ }
+ 
+ .bd-image img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+ }
+ 
+ .bd-details {
+    flex: 1;
+    font-size: 18px;
+ }
+ 
+ .bd-details p {
+    margin: 10px 0;
+ }
+ 
+ .bd-panier {
+    margin-top: 40px;
+    text-align: center;
+ }
+ 
+ .bd-panier button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+ }
+ 
+ 
+ .form-group{
+    display: none;
+ }
+ .bande-dessinee-container {
+    margin-top: 20px; /* Espace au-dessus du conteneur */
+ }
+ 
+ .album-image {
+    max-width: 150px; /* Limite la taille de l'image */
+    height: auto; /* Garde le ratio de l'image */
+    
+      margin-top: 120px; /* Espace au-dessus de l'image */
+      margin-bottom: 40px; /* Espace en dessous de l'image */
+  }
+  
+ 
+ 
+ .album-details {
+    margin-left: 20px; /* Espace à gauche pour les détails */
+    margin-top: 120px; /* Espace au-dessus de l'image */
+ }
+ 
+ .titre-personnalise {
+    font-size: 1.5em; /* Taille de police légèrement plus grande */
+ }
+ .btn {
+   border-radius: 15px; /* Arrondir les coins */
+   /* Ajoutez d'autres styles si nécessaire */
+}
+
+ .btn-danger {
+    margin-top: 10px; /* Espace au-dessus du bouton */
+ }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-color: rgb(0, 0, 0);
+   padding-top: 100px;
+}
+
+.navbar {
+   height: 50px;
+}
+h1{
+   color: goldenrod;
+  margin: auto;
+   
+}
+.arizonia-regular {
+   font-family: "Arizonia", system-ui;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+ .ligne-rouge {
+   height: 1px; 
+   background-color: red; 
+   margin: 0; 
+ }
+
+ #catalogue {
+  width: 70%;
+ }
+
+ /* .carte {
+  width: auto;
+ } */
+
+.carte:hover{
+  filter: opacity(1);
+  transform: scale(1.3); z-index: +1; cursor: auto;;
+ }
+
+ .card-img-top:hover {
+  transform: scale(1);cursor: pointer;
+}
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.card {
+  min-height: 300px; 
+}
