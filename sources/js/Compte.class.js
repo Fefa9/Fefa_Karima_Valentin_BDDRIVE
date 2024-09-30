@@ -39,6 +39,18 @@ class Compte {
         if (!mail) throw new Error("Saisir une adresse mail");
         let pattern = /^[a-z A-Z 0-9._]+@[a-z A-Z]+\.[a-z A-Z]+$/
         if (!pattern.test(mail)) throw new Error("Adresse mail incorrecte");
+
+        // Vérifier les mails dans le local storage
+        let recupMail = localStorage.getItem("listeMail");
+        let tMail = [];
+        if(recupMail) {
+            tMail=recupMail.split(";").map(item => JSON.parse(item).mail);
+        } 
+        // Vérifier si le mail existe déjà
+        if (tMail.includes(mail)) {
+            throw new Error("Cet e-mail est déjà répertorié.");
+        }
+        
         this.#mail=mail;
     }
     #setPrenom(prenom){
