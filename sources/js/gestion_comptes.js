@@ -23,7 +23,7 @@
         let compte = new Compte(mail,prenom,nom,mdp);
 
         //sauvegarde localStorage
-        let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'}'
+        let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'"}'
         let liste = localStorage.getItem("listeCompte");
         if (liste) liste+=";" + serialCompte;
         else liste = serialCompte;
