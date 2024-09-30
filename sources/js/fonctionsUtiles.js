@@ -10,7 +10,7 @@ function genererMenu(div){
             <i class="bi bi-person"></i>
         </a>
         <a class="nav-link text-light" style="font-size:larger;" href="#">
-            <i class="bi bi-cart"></i>
+            <i class="bi bi-cart"></i><span id="cart-counter" class="badge badge-pill badge-danger">0</span>
         </a>
         </div>
     </nav> 
