@@ -21,7 +21,7 @@ console.log(boutonCompte)
     // fonction generation du menu dans toutes div (de class="navigation")
     function genererMenu(div){
         let navigationHTML = `
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark arizonia-regular">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark arizonia-regular"> 
                 <div class="container-fluid"> 
                 <h1>BD Kiosque</h1>
                 ${boutonCompte}
