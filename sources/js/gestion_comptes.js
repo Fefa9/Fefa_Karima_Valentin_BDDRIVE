@@ -23,17 +23,29 @@
         let compte = new Compte(mail,prenom,nom,mdp);
 
         //sauvegarde localStorage
-        let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'}'
+        let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'"}'
         let liste = localStorage.getItem("listeCompte");
         if (liste) liste+=";" + serialCompte;
         else liste = serialCompte;
         localStorage.setItem("listeCompte",liste);
 
+        let serialMail= '{ "mail":"' + mail +'"}'
+        let recupMail= localStorage.getItem("listeMail");
+        if (recupMail)
+        recupMail+= ";" + serialMail;
+        else recupMail=serialMail;
+        localStorage.setItem("listeMail", recupMail);
+
+
+
+
     } catch (err){
         divErr.innerHTML = err.message;
     }
+   
+   
  });
- 
+
   // viderLocalstorage()
   function viderLocalstorage() {
     localStorage.removeItem("listeCompte");
