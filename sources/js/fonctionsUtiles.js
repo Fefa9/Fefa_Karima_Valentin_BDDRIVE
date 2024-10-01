@@ -84,6 +84,7 @@ console.log(boutonCompte)
                           <a  href="inscription.html" class="float-end text-light">Inscription</a>
                       </div>
                     </div>
+                    <div id="erreur" style="color: red; text-align: center;"></div>
                     <div class="modal-footer pt-3">                  
                       <button type="button" id="connexion" class="btn btn-danger mx-auto w-100">Login</button>
                     </div>
@@ -105,6 +106,7 @@ console.log(boutonCompte)
         if (deconnexion){
         deconnexion.addEventListener("click",(event)=>{
         localStorage.setItem("Authentifie",false);
+        localStorage.removeItem("CompteConnecte")
         location.reload()
         },)
       }
@@ -119,7 +121,7 @@ console.log(boutonCompte)
           var tCompte = liste.split(";");
           for (let i in tCompte){
             var compteJSON = JSON.parse(tCompte[i])
-            var compte = new Compte (compteJSON.mail, compteJSON.prenom, compteJSON.nom, compteJSON.mdp);
+            //var compte = new Compte (compteJSON.mail, compteJSON.prenom, compteJSON.nom, compteJSON.mdp);
 //console.log(compte.mail)//{"mail":"Jesuispilote@gmail.com","prenom":"Pilote","nom":"Dananas","mdp":"AZERTy@19999"}
 //console.log(compteJSON.mail)
 
@@ -132,7 +134,12 @@ console.log(boutonCompte)
 //console.log(password)
             if (username === compteJSON.mail && password === compteJSON.mdp) {
               Authentifie = true
+              console.log(compteJSON)
+              console.log("compteJSON")
               localStorage.setItem("Authentifie",true);
+              let compteJSONSerial = '{"mail":"'+ compteJSON.mail +'","prenom":"'+ compteJSON.prenom +'","nom":"'+ compteJSON.nom +'","mdp":"'+ compteJSON.mdp +'"}'
+              console.log(compteJSONSerial)
+              localStorage.setItem("CompteConnecte",compteJSONSerial)
             console.log("Connexion reussi (Le compte existe");
             window.location.href = "index.html"
             break;
@@ -140,8 +147,11 @@ console.log(boutonCompte)
         } else {
           form.reportValidity()
         } 
-            if (!Authentifie)
+            if (!Authentifie){
+              let erreurConnexion = document.querySelector("#erreur");
+              erreurConnexion.innerHTML="Mail ou mot de passe incorrect"
               console.log("Connexion non reussi (Le compte n'existe pas)")
+            }
           }
           
         }
