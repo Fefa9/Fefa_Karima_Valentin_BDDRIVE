@@ -43,7 +43,7 @@ console.log(boutonCompte)
                         <a class="nav-link active" aria-current="page" href="catalogue.html">Catalogue / </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="aide.html">Aide / </a>
+                        <a class="nav-link" href="contact.html">Aide / </a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="mentions_légales.html">Mentions légales</a>
