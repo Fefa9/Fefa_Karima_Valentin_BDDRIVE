@@ -2,14 +2,13 @@
 
 let myform = document.getElementById("form");
 myform.addEventListener("submit", function(event) {
-    event.preventDefault(); // Empêche le formulaire de se soumettre immédiatement
-
-    // Réinitialisation des messages d'erreur
+event.preventDefault(); // Empêche le formulaire de se soumettre immédiatement
+// Réinitialisation des messages d'erreur
     document.getElementById("error-idprenom").textContent = "";
     document.getElementById("error-idname").textContent = "";
     document.getElementById("error-idmail").textContent = "";
 
-    try {
+        try {
         let firstname = document.getElementById("idprenom").value.trim();
         let lastname = document.getElementById("idname").value.trim();
         let email = document.getElementById("idmail").value.trim();
@@ -50,8 +49,11 @@ myform.addEventListener("submit", function(event) {
         // Si tout est valide
         Swal.fire({
             title: " ",
-            text: "Votre Message a été soumis avec succès.",
+            text: "Votre message a été soumis avec succès.",
             icon: "success"
+        }).then(function() {
+            // Redirection vers la page catalogue après la validation
+            window.location.href = "catalogue.html"; // Remplace par l'URL de la page catalogue
         });
     } 
     catch (error) {
@@ -66,4 +68,5 @@ myform.addEventListener("submit", function(event) {
             console.error(error.message);
         }
     }
+    
 });
