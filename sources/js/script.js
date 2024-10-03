@@ -226,7 +226,6 @@ function viderPanier() {
 // // }
 
 // // Fonction pour ajouter un album au panier
-=======
 const SRC_IMG = "images/";
 // const ALBUM_DEFAULT_MINI = SRC_IMG + "noComicsMini.jpg";
 // const ALBUM_DEFAULT = SRC_IMG + "noComics.jpg";
