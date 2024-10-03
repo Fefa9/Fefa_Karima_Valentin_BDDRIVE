@@ -53,7 +53,7 @@ event.preventDefault(); // Empêche le formulaire de se soumettre immédiatement
             icon: "success"
         }).then(function() {
             // Redirection vers la page catalogue après la validation
-            window.location.href = "catalogue.html"; // Remplace par l'URL de la page catalogue
+            window.location.href = "index.html"; // Remplace par l'URL de la page catalogue
         });
     } 
     catch (error) {

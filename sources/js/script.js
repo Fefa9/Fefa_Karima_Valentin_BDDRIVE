@@ -49,7 +49,7 @@ function ajouterAuPanier(id, prix) {
         });
     } else {
         console.log(`L'album avec l'ID ${id} est déjà dans le panier.`);
-        // Optionnel : tu peux afficher une alerte ici aussi
+        // Optionnel : je peux afficher une alerte ici aussi
         Swal.fire({
             title: 'Déjà dans le panier',
             text: `Cet album est déjà dans votre panier.`,
