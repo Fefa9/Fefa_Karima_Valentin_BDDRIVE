@@ -56,14 +56,16 @@ function afficheCatalogueFiltre1() {
                 albumDiv.style.marginBottom = "20px"; 
 
                 albumDiv.innerHTML = ` 
-                <a href="detail_BD.html?id=${album.id}" class="text-decoration-none">
+                
+                <a href="detail_BD.html?auteur=${auteur.nom}&serie=${serie.nom}&prix=${album.prix}&numero=${album.numero}&titre=${album.titre}&id=${id}&img=${nomFic}" class="text-decoration-none">
+
                     <div class="card h-100 bg-secondary text-white ">
                         <img src="${imgSrc}" class="card-img-top rounded mt-2 px-3 " alt="${album.titre}"> 
                         <div class="card-body d-flex flex-column justify-content-between ">
                             <h5 class="card-title text-wrap " style="color: white;">${album.titre}</h5>
                             <p class="card-text mt-auto"  style="color: white;">${album.prix} €</p>
                             <div class="text-center d-grid gap-2 mt-auto">
-                                <a href="#" class="btn btn-danger center-self">Ajouter</a>
+                                <a href="#" data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
                             </div>
                         </div>
                     </div>
@@ -103,6 +105,8 @@ function afficheCatalogueFiltre2() {
         let albumTrouve = false; // Pour vérifier s'il y a des albums pour la série
         for (let [id, album] of albums.entries()) {
             if (album.idSerie === idSerie) {
+                const auteur = auteurs.get(album.idAuteur);
+
                 // Créer le nom de fichier avec les détails de l'album
                 var nomFic = `${serie.nom}-${album.numero}-${album.titre}`;
                 
@@ -117,16 +121,20 @@ function afficheCatalogueFiltre2() {
                 albumDiv.style.marginBottom = "20px";
 
                 albumDiv.innerHTML = `
+                   <a href="detail_BD.html?auteur=${auteur.nom}&serie=${serie.nom}&prix=${album.prix}&numero=${album.numero}&titre=${album.titre}&id=${id}&img=${nomFic}" class="text-decoration-none">
+
                     <div class="card h-100 bg-secondary text-white ">
-                        <img src="${imgSrc}" class="card-img-top rounded mt-2 px-3 " alt="${album.titre}">
-                        <div class="card-body d-flex flex-column ">
-                            <h5 class="card-title text-wrap ">${album.titre}</h5>
-                            <p class="card-text mt-auto">${album.prix} €</p>
-                            <div class="text-center d-grid gap-2">
-                                <a href="#" class="btn btn-danger center-self">Ajouter</a>
+                        <img src="${imgSrc}" class="card-img-top rounded mt-2 px-3 " alt="${album.titre}"> 
+                        <div class="card-body d-flex flex-column justify-content-between ">
+                            <h5 class="card-title text-wrap " style="color: white;">${album.titre}</h5>
+                            <p class="card-text mt-auto"  style="color: white;">${album.prix} €</p>
+                            <div class="text-center d-grid gap-2 mt-auto">
+                                <a href="#" data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
                             </div>
                         </div>
                     </div>
+                </a>    
+                   
                     <br><br>
                 `;
 

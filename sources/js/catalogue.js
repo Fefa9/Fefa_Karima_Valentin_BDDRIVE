@@ -43,14 +43,14 @@
 
     //Réduire l'affichache des BD à 20 pour les tests
 
-    let albumsArray = Array.from(albums.values()); // Convertit la Map en tableau
-    let albumsAffiches = albumsArray.slice(0, 20); // Prend les 20 premiers albums
+    //let albumsArray = Array.from(albums.values()); // Convertit la Map en tableau
+    //let albumsAffiches = albumsArray.slice(0, 20); // Prend les 20 premiers albums
 
 
     function afficheCatalogue (){
 
         // remplace albumsAffiches par albums pour revenir à toutees lesbd
-        albumsAffiches.forEach((albums,id)=>{
+        albums.forEach((albums,id)=>{
             
                 let auteur = auteurs.get(albums.idAuteur)
                 let serie = series.get(albums.idSerie)
