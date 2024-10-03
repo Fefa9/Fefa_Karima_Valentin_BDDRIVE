@@ -41,7 +41,15 @@
 	//     console.log(album.titre+" N°"+album.numero+" Série:"+serie.nom+" Auteur:"+auteur.nom);
 	// });
 
+    //Réduire l'affichache des BD à 20 pour les tests
+
+    //let albumsArray = Array.from(albums.values()); // Convertit la Map en tableau
+    //let albumsAffiches = albumsArray.slice(0, 20); // Prend les 20 premiers albums
+
+
     function afficheCatalogue (){
+
+        // remplace albumsAffiches par albums pour revenir à toutees lesbd
         albums.forEach((albums,id)=>{
             
                 let auteur = auteurs.get(albums.idAuteur)
@@ -58,9 +66,10 @@
             let nomfichier = `${serie.nom}-${num}-${titre}`
 
             nomfichier = nomfichier.replace(/'|!|\?|\.|"|:|\$/g, "");
+            
 
             innerCatalogue.innerHTML += `
-            <div class="carte col-6 col-lg-3 col-xl-2 mb-3" id="${id}">
+            <div class="carte col-4 col-lg-3 col-xl-2 mb-3" id="${id}">
             <div class="card h-100 bg-secondary text-white">
                     <a href="detail_BD.html?auteur=${auteur.nom}&serie=${serie.nom}&prix=${prix}&numero=${num}&titre=${titre}&id=${id}&img=${nomfichier}"><img src="images/albumsMini/${nomfichier}.jpg" class="card-img-top rounded mt-2 px-3 " alt="..." id="imageAlbum"></a>
                     <div class="card-body d-flex flex-column">
