@@ -106,3 +106,5 @@ document.getElementById("btn-panier").addEventListener("click", () => {
 
 
 
+
+
