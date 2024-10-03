@@ -49,7 +49,7 @@ function ajouterAuPanier(id, prix) {
         });
     } else {
         console.log(`L'album avec l'ID ${id} est déjà dans le panier.`);
-        // Optionnel : tu peux afficher une alerte ici aussi
+        // Optionnel : je peux afficher une alerte ici aussi
         Swal.fire({
             title: 'Déjà dans le panier',
             text: `Cet album est déjà dans votre panier.`,
@@ -91,6 +91,8 @@ document.getElementById("btn-panier").addEventListener("click", () => {
 //     // Rediriger vers la page de recherche avec la requête dans l'URL
 //     window.location.href = `recherche.html?query=${encodeURIComponent(query)}`;
 // });
+
+
 
 
 

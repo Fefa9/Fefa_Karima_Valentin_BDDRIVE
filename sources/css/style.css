@@ -79,3 +79,45 @@ padding-left: 20px;
 
 
 
+
+
+.detail .card-text {
+   font-size: 20px; /* Taille de la police */
+   color: white; /* Couleur du texte */
+   margin-bottom: 10px; /* Espacement entre les paragraphes */
+}
+
+/* Style spécifique pour certains éléments */
+#iddetail #auteur {
+   font-weight: bold; /* Texte en gras */
+   color: red; /* Couleur différente pour l'auteur */
+}
+
+#iddetail #prix {
+   font-size: 30px; /* Texte plus grand pour le prix */
+   color: white; /* Couleur rouge pour le prix */
+   padding-top: 50px;
+}
+#btn-panier {
+   border-radius: 10px;
+   font-size: 20px;
+   height: 60px;
+   background-color: red;
+   width: 200px;
+   color: white;
+   font-weight: bold;
+
+}
+#titre, #numero {
+   display: inline-block;
+   margin-right: 10px; /* Espacement entre les deux éléments */
+}
+#iddetail {
+   padding-top: 20px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour les détails */
+   border-radius: 8px;
+}
+.container{
+   margin-top: 150px;
+   
+}

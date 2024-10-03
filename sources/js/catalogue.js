@@ -77,13 +77,35 @@
                         <h6 class="card-subtitle mb-2 text-white" id="auteurAlbum">${auteur.nom}</h6>
                         <p class="card-text mt-auto" id="prixAlbum">${prix} €</p>
                     <div class="text-center d-grid gap-2">
-                        <a href="#" class="btn btn-danger center-self">Ajouter</a>
+                        <a data-id="${id}" class="btn btn-danger center-self ajouter">Ajouter</a>
                     </div>
                     </div>
                     </div>
             </div>`
-
-
         })
-    }
+    
 
+    document.querySelectorAll(".ajouter").forEach(button => {
+        button.addEventListener('click', (event) => {
+            ajouterPannier()
+
+//             let bdId = event.target.getAttribute('data-id'); // Récupère l'ID de l'utilisateur
+// console.log(bdId);
+//             //On recupere le contenue du pannier
+            
+//             let tPannier = localStorage.getItem("pannier");
+// console.log(tPannier)
+//             if(tPannier){
+//                 tPannier = JSON.parse(tPannier);
+//             // On ajoute le nouvelle article
+//                 tPannier.push(bdId)
+//             // On On push le nouveau pannier
+//                 localStorage.setItem("pannier",JSON.stringify(tPannier))
+//         }else { 
+//             tPannier = [];
+//             tPannier.push(bdId);
+//             localStorage.setItem("pannier", JSON.stringify(tPannier));
+//         }
+        });
+    });
+    }
