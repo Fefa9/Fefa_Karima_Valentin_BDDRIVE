@@ -87,7 +87,7 @@
 
     document.querySelectorAll(".ajouter").forEach(button => {
         button.addEventListener('click', (event) => {
-            ajouterPannier()
+            ajouterPanier()
 
 //             let bdId = event.target.getAttribute('data-id'); // Récupère l'ID de l'utilisateur
 // console.log(bdId);

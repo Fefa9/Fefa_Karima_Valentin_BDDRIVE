@@ -16,39 +16,39 @@
     }
 
 
-    //Fonction Ajouter (class="ajouter") le bouton ajouter adds les ids des bd au local storage. Elles seront recupérés plus tard par un click sur le pannier
-    function ajouterPannier() {
+    //Fonction Ajouter (class="ajouter") le bouton ajouter adds les ids des bd au local storage. Elles seront recupérés plus tard par un click sur le panier
+    function ajouterPanier() {
       let bdId = event.target.getAttribute('data-id'); // Récupère l'ID du produit
       console.log(bdId);
       
       // On récupère le contenu du panier
-      let tPannier = localStorage.getItem("pannier");
-      console.log(tPannier);
+      let tpanier = localStorage.getItem("panier");
+      console.log(tpanier);
       
-      if (tPannier) {
+      if (tpanier) {
           // Si le panier existe, on parse pour obtenir un tableau 
-          tPannier = JSON.parse(tPannier);
+          tpanier = JSON.parse(tpanier);
           
           // Vérifier si l'article est déjà dans le panier
-          let item = tPannier.find(article => article.id == bdId);
+          let item = tpanier.find(article => article.id == bdId);
           
           if (item) {
               // Si l'article existe déjà, on +1 la quantité
               item.quantity += 1;
           } else {
               // Sinon, on ajoute un nouvel article au panier
-              tPannier.push({ id: bdId, quantity: 1 });
+              tpanier.push({ id: bdId, quantity: 1 });
           }
   
-          console.log(tPannier);
+          console.log(tpanier);
           // On update le panier 
-          localStorage.setItem("pannier", JSON.stringify(tPannier));
+          localStorage.setItem("panier", JSON.stringify(tpanier));
           
       } else {
           // Si le panier n'existe pas, on crée un nouveau tableau 
-          tPannier = [{ id: bdId, quantity: 1 }];
-          localStorage.setItem("pannier", JSON.stringify(tPannier));
-          console.log(tPannier);
+          tpanier = [{ id: bdId, quantity: 1 }];
+          localStorage.setItem("panier", JSON.stringify(tpanier));
+          console.log(tpanier);
       }
   }
 
@@ -59,7 +59,7 @@
                 <div class="container-fluid"> 
                 <h1>BD Kiosque</h1>
                 ${boutonCompte}
-                <button class="btn btn-lg btn-dark" id="pannier" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart"></i></button>
+                <button class="btn btn-lg btn-dark" id="panier" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-cart"></i></button>
 
                 </div>
             </nav> 
@@ -79,7 +79,7 @@
                         <a class="nav-link" href="contact.html">Aide / </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="mentions_légales.html">Mentions légales</a>
+                        <a class="nav-link" href="mentionslegales.html">Mentions légales</a>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@
 
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title " id="offcanvasRightLabel">Pannier</h5>
+        <h5 class="offcanvas-title " id="offcanvasRightLabel">panier</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
             <div class="offcanvas-body" id="cartevide" style="background: #000;">
@@ -207,22 +207,22 @@
 
 
 
-      // Creation des cartes dans le pannier 
+      // Creation des cartes dans le panier 
 
-      let pannier = document.querySelector("#pannier");
-      if (pannier) {
-      pannier.addEventListener("click", (event) => {
+      let panier = document.querySelector("#panier");
+      if (panier) {
+      panier.addEventListener("click", (event) => {
       let cartevide = document.querySelector("#cartevide");
       cartevide.innerHTML = "";
 
     // Recup dans le localstorage le tableau
-    let tPannier = localStorage.getItem("pannier");
+    let tpanier = localStorage.getItem("panier");
 
-    if (tPannier) {
-      tPannier = JSON.parse(tPannier);
+    if (tpanier) {
+      tpanier = JSON.parse(tpanier);
 
       // On retrouve les infos des BD dans les datas via les ids du tableau
-      tPannier.forEach((idAlbum, index) => {
+      tpanier.forEach((idAlbum, index) => {
         let album = albums.get(idAlbum.id); // recup  album avec idAlbum.id
         let titre = album.titre;
         let prix = parseFloat(album.prix);
@@ -278,11 +278,11 @@
           console.log("supprimer l'article avec l'id:", itemId);
 
           
-          let itemIndex = tPannier.findIndex(item => item.id === itemId);
+          let itemIndex = tpanier.findIndex(item => item.id === itemId);
           if (itemIndex !== -1) {
             
-            tPannier.splice(itemIndex, 1);
-            localStorage.setItem("pannier", JSON.stringify(tPannier));
+            tpanier.splice(itemIndex, 1);
+            localStorage.setItem("panier", JSON.stringify(tpanier));
 
             
             button.closest('.card-sm').remove();
@@ -306,14 +306,14 @@
     // fonction Change la quantité et ajuste le prix
     function changeQuantity(index){
         let value = document.getElementById(`select-${index}`).value;
-        let tPannier = localStorage.getItem("pannier");
-        tPannier = JSON.parse(tPannier);
+        let tpanier = localStorage.getItem("panier");
+        tpanier = JSON.parse(tpanier);
 
-        console.log(tPannier);
-        let album = albums.get(tPannier[index].id); // recup  album avec idAlbum.id
+        console.log(tpanier);
+        let album = albums.get(tpanier[index].id); // recup  album avec idAlbum.id
         console.log(album);
         console.log(index);
-        console.log(tPannier[index].id);
+        console.log(tpanier[index].id);
 
 
         let prix = parseFloat(album.prix);
@@ -321,13 +321,13 @@
         const quantity = parseInt(value);
         //console.log(`select-${index}`);
         console.log(quantity);
-        const priceElement = document.getElementById(`price-${tPannier[index].id}`);
+        const priceElement = document.getElementById(`price-${tpanier[index].id}`);
         priceElement.textContent = (prix * quantity).toFixed(2); // Change le prix
         
 
         // Update la quantité dans le localStorage
-        tPannier[index].quantity = quantity; // 
-        localStorage.setItem("pannier", JSON.stringify(tPannier)); 
+        tpanier[index].quantity = quantity; // 
+        localStorage.setItem("panier", JSON.stringify(tpanier)); 
       
 
     }

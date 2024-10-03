@@ -37,7 +37,7 @@ function ajouterAuPanier(id, prix) {
     const albumExistant = panier.find(album => album.id === id);
     if (!albumExistant) {
         // Si l'album n'est pas déjà dans le panier, on l'ajoute
-        panier.push({ id: id, prix: prix });
+        panier.push({ id: id, quantity: 1 });
         localStorage.setItem("panier", JSON.stringify(panier)); // Sauvegarder le panier mis à jour
         console.log(`Album avec ID ${id} et prix ${prix} ajouté au panier.`);
         // Afficher une notification SweetAlert2
