@@ -25,10 +25,15 @@
         //sauvegarde localStorage
         let serialCompte = '{"mail":"'+ mail +'","prenom":"'+ prenom +'","nom":"'+ nom +'","mdp":"'+ mdp +'"}'
         let liste = localStorage.getItem("listeCompte");
+        console.log("avant");
         if (liste) liste+=";" + serialCompte;
         else liste = serialCompte;
         localStorage.setItem("listeCompte",liste);
 
+        console.log(localStorage.getItem("listeCompte"));
+        console.log(liste);
+
+console.log(liste.split(";"));
         let serialMail= '{ "mail":"' + mail +'"}'
         let recupMail= localStorage.getItem("listeMail");
         if (recupMail)
