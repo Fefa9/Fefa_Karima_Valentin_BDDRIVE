@@ -85,9 +85,7 @@
                 </div>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search"  id="idRecherche" placeholder="Auteur,titre,ISBN" aria-label="Search">
-                    <button class="btn btn-light" type="submit">
-                        <i class="bi bi-search"></i>
-                      </button>
+                    <a href="WIP.html" class="btn btn-light" type="submit"><i class="bi bi-search"></i></a>
                 </form>
                 </div>
               </nav>
@@ -113,7 +111,7 @@
                           <input type="password" name="password" class="form-control" id="password" required>
                       </div>
                       <div class="mb-1">
-                          <a class="text-light" href="#">Mot de passe oublié</a>
+                          <a class="text-light" href="WIP.html">Mot de passe oublié</a>
                           <a  href="inscription.html" class="float-end text-light">Inscription</a>
                       </div>
                     </div>

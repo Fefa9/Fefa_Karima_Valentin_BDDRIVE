@@ -65,13 +65,14 @@
 
             let nomfichier = `${serie.nom}-${num}-${titre}`
 
-            nomfichier = nomfichier.replace(/'|!|\?|\.|"|:|\$/g, "");
-            
+
+            nomfichier = nomfichier.replace(/\'|\!|\?|\.|"|:|\$|\/|\\/g, "")//(/'|!|\?|\.|"|:|\$/g, "");
+
 
             innerCatalogue.innerHTML += `
             <div class="carte col-4 col-lg-3 col-xl-2 mb-3" id="${id}">
             <div class="card h-100 bg-secondary text-white">
-                    <a href="detail_BD.html?auteur=${auteur.nom}&serie=${serie.nom}&prix=${prix}&numero=${num}&titre=${titre}&id=${id}&img=${nomfichier}"><img src="images/albumsMini/${nomfichier}.jpg" class="card-img-top rounded mt-2 px-3 " alt="..." id="imageAlbum"></a>
+                    <a href="detail_BD.html?auteur=${auteur.nom}&serie=${serie.nom}&prix=${prix}&numero=${num}&titre=${titre}&img=${nomfichier}&id=${id}"><img src="images/albumsMini/${nomfichier}.jpg" class="card-img-top rounded mt-2 px-3 " alt="..." id="imageAlbum"></a>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-wrap" id="titreAlbum">${serie.nom}-${num}-${titre}</h5>
                         <h6 class="card-subtitle mb-2 text-white" id="auteurAlbum">${auteur.nom}</h6>
