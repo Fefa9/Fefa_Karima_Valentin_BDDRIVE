@@ -65,7 +65,7 @@ function afficheCatalogueFiltre1() {
                             <h5 class="card-title text-wrap " style="color: white;">${album.titre}</h5>
                             <p class="card-text mt-auto"  style="color: white;">${album.prix} €</p>
                             <div class="text-center d-grid gap-2 mt-auto">
-                                <a href="#" data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
+                                <a  data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ function afficheCatalogueFiltre2() {
                             <h5 class="card-title text-wrap " style="color: white;">${album.titre}</h5>
                             <p class="card-text mt-auto"  style="color: white;">${album.prix} €</p>
                             <div class="text-center d-grid gap-2 mt-auto">
-                                <a href="#" data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
+                                <a  data-id="${id}" class=" ajouter btn btn-danger center-self">Ajouter</a>
                             </div>
                         </div>
                     </div>
