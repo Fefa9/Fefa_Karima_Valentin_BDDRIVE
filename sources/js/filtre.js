@@ -82,6 +82,12 @@ function afficheCatalogueFiltre1() {
 
         
     }
+    document.querySelectorAll(".ajouter").forEach(button => {
+        button.addEventListener('click', (event) => {
+            ajouterPanier()
+
+        });
+    });
 }
 
 
@@ -145,6 +151,12 @@ function afficheCatalogueFiltre2() {
 
         
     }
+    document.querySelectorAll(".ajouter").forEach(button => {
+        button.addEventListener('click', (event) => {
+            ajouterPanier()
+
+        });
+    });
 }
 
     
